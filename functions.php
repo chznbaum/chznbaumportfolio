@@ -1,5 +1,9 @@
 <?php
 
+// Support Featured Images
+add_theme_support('post-thumbnails');
+
+// Theme menus
 add_theme_support( 'menus' );
 
 function register_theme_menus() {
@@ -12,8 +16,10 @@ function register_theme_menus() {
 
 }
 
+// Hook theme menus function to theme setup
 add_action ( 'init', 'register_theme_menus' );
 
+// Queue theme styles
 function chznbaum_theme_styles() {
 
   wp_enqueue_style( 'foundation_css', get_template_directory_uri() . '/css/foundation.css' );
@@ -23,8 +29,10 @@ function chznbaum_theme_styles() {
 
 }
 
+// Hook theme styles function to script loading
 add_action ( 'wp_enqueue_scripts', 'chznbaum_theme_styles' );
 
+// Queue theme scripts
 function chznbaum_theme_js() {
 
   wp_enqueue_script( 'modernizr_js', get_template_directory_uri() . '/js/modernizr.js', '', '', false );
@@ -33,12 +41,15 @@ function chznbaum_theme_js() {
 
 }
 
+// Hook theme scripts function to script loading
 add_action ( 'wp_enqueue_scripts', 'chznbaum_theme_js' );
 
+// Remove the admin bar
 function remove_admin_bar() {
   show_admin_bar( false );
 }
 
+// Hook admin bar function to end of theme setup
 add_action( 'after_setup_theme', 'remove_admin_bar' );
 
 ?>
