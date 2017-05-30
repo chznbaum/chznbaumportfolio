@@ -21,7 +21,7 @@
           $defaults = array(
             'container' => false,
             'theme_location' => 'primary-menu',
-            'menu-class' => 'no-bullet'
+            'menu_class' => 'no-bullet'
           );
 
           wp_nav_menu( $defaults );
