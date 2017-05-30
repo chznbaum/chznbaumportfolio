@@ -16,6 +16,12 @@ function register_theme_menus() {
 
 }
 
+function chznbaum_excerpt_length( $length ) {
+  return 16;
+}
+
+add_filter( 'excerpt_length', 'chznbaum_excerpt_length', 999 );
+
 // Hook theme menus function to theme setup
 add_action ( 'init', 'register_theme_menus' );
 
