@@ -11,7 +11,6 @@
 
             <article class="post">
               <h1><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-              <h2><?php echo strip_tags( get_the_excerpt() ); ?></h2>
               <ul class="post-meta no-bullet">
                 <li class="author">
                   <span class="chznbaum-avatar small">
@@ -28,6 +27,7 @@
                   <p>Photo by <?php the_author(); ?></p>
                 </div>
               <?php endif; ?>
+              <?php the_content(); ?>
             </article>
       
           <?php endwhile; else : ?>
