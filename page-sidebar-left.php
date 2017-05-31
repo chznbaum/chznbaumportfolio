@@ -27,14 +27,7 @@ Template Name: Left Sidebar
 
         </div>
       </div>
-      <!-- Secondary Column -->
-      <div class="small-12 medium-4 medium-pull-8 columns">
-        <div class="secondary">
-          <div class="module-category">
-            <h2 class="module-heading">Sidebar</h2>
-          </div>
-        </div>
-      </div>
+      <?php get_sidebar( 'page' ); ?>
     </div>
   </div>
 </section>
